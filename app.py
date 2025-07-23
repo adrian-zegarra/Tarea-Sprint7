@@ -9,7 +9,7 @@ st.title("Panel de Control: Análisis de Ventas de Vehículos")
 # Carga del dataset
 @st.cache_data
 def load_data():
-    df = pd.read_csv("/Users/elias/Downloads/Proyectos Tripleten/Actividad-Sprint7/Tarea-Sprint7/Tarea-Sprint7/vehicles_us.csv")  
+    df = pd.read_csv("Data/vehicles_us.csv")  
     # Extraer la marca desde la columna 'model'
     df['brand'] = df['model'].str.split().str[0]
     return df
